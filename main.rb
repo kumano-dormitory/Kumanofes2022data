@@ -2,6 +2,7 @@ require 'csv'
 require 'erb'
 
 program_csv_path = "./ryosai2022.csv"
+output_dir = "docs"
 
 events_erb = <<EndOfContents
 <html>
@@ -87,7 +88,7 @@ events_erb = <<EndOfContents
 <% events.each do |event| %>
     <div class="col-one-third" style="display:block;box-sizing:border-box;">
       <div class="card-of-event">
-        <img class="card-img-of-event" src="/<%= event['image'] %>" alt="<%= %>">
+        <img class="card-img-of-event" src="/Kumanofes2022data/<%= event['image'] %>" alt="<%= %>">
         <div class="card-body-of-event">
           <h4 class="card-title-of-event"><%= event['name'] %></h4>
           <% if event['place'] && !event['place'].empty? %><p class="card-place-of-event">場所: <%= event['place'] %></p><% end %>
@@ -117,20 +118,20 @@ days = ['1125', '1126', '1127', '1128', '1129', '1130', '1201', '1202', '1203', 
 days.each do |day|
   events = csv_data.filter{ |d| d['start_day'] == day }
   b = binding
-  File.open("html/events#{day}.html", 'w+') do |f|
+  File.open("#{output_dir}/events#{day}.html", 'w+') do |f|
     f.write(ERB.new(events_erb).result(b))
   end
 end
 
 # guerrilla
 events = csv_data.filter{ |d| d['start_day'] == 'ゲリラ' }
-File.open('html/guerrilla.html', 'w+') do |f|
+File.open("#{output_dir}/guerrilla.html", 'w+') do |f|
   f.write(ERB.new(events_erb).result(binding))
 end
 
 # permanent
 events = csv_data.filter{ |d| d['start_day'] == '常設' }
-File.open('html/permanent.html', 'w+') do |f|
+File.open("#{output_dir}/permanent.html", 'w+') do |f|
   f.write(ERB.new(events_erb).result(binding))
 end
 
