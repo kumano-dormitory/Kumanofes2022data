@@ -122,4 +122,16 @@ days.each do |day|
   end
 end
 
+# guerrilla
+events = csv_data.filter{ |d| d['start_day'] == 'ゲリラ' }
+File.open('html/guerrilla.html', 'w+') do |f|
+  f.write(ERB.new(events_erb).result(binding))
+end
+
+# permanent
+events = csv_data.filter{ |d| d['start_day'] == '常設' }
+File.open('html/permanent.html', 'w+') do |f|
+  f.write(ERB.new(events_erb).result(binding))
+end
+
 puts "Program ended"
