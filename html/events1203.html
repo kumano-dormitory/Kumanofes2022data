@@ -1,0 +1,337 @@
+<html>
+<head>
+</head>
+<body>
+<div>
+
+<style scoped>
+.row-of-events {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-right: calc(var(--bs-gutter-x)/ -2);
+  margin-left: calc(var(--bs-gutter-x)/ -2);
+}
+.row-of-events>* {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x)/ 2);
+  padding-left: calc(var(--bs-gutter-x)/ 2);
+  margin-top: var(--bs-gutter-y);
+}
+.card-of-event {
+  background-color: #0d6efd!important;
+  color: #fff!important;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 0.25rem;
+  box-sizing:border-box;
+  margin-bottom: 1rem;
+}
+.card-img-of-event {
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+  width: 100%;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+.card-body-of-event {
+  flex: 1 1 auto;
+  padding: 1rem 1rem;
+  box-sizing: border-box;
+  display: block;
+}
+.card-place-of-event {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+.card-title-of-event {
+  margin-bottom: 0.5rem;
+  font-size: calc(1.275rem + .3vw);
+}
+@media (min-width: 1200px) {
+  .card-title-of-event {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .col-one-third {
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+  }
+}
+</style>
+<div style="width:100%;padding:30px;margin-right:auto;margin-left:auto;box-sizing: border-box;">
+  <div class="row-of-events" style="box-sizing: border-box;">
+
+    <div class="col-one-third" style="display:block;box-sizing:border-box;">
+      <div class="card-of-event">
+        <img class="card-img-of-event" src="/images/1203/サメウォッチング.jpg" alt="">
+        <div class="card-body-of-event">
+          <h4 class="card-title-of-event">サメウォッチング</h4>
+          <p class="card-place-of-event">場所: 食北</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-one-third" style="display:block;box-sizing:border-box;">
+      <div class="card-of-event">
+        <img class="card-img-of-event" src="/images/1203/タイBLドラマ耐久上映会.jpg" alt="">
+        <div class="card-body-of-event">
+          <h4 class="card-title-of-event">タイBLドラマ耐久上映会</h4>
+          <p class="card-place-of-event">場所: 食堂北(というかスクリーンがあるところ？)</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-one-third" style="display:block;box-sizing:border-box;">
+      <div class="card-of-event">
+        <img class="card-img-of-event" src="/images/1203/混沌アイス.jpg" alt="">
+        <div class="card-body-of-event">
+          <h4 class="card-title-of-event">混沌アイス</h4>
+          <p class="card-place-of-event">場所: どこか</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-one-third" style="display:block;box-sizing:border-box;">
+      <div class="card-of-event">
+        <img class="card-img-of-event" src="/images/1203/喫茶・軽食クマノ.jpg" alt="">
+        <div class="card-body-of-event">
+          <h4 class="card-title-of-event">喫茶・軽食クマノ</h4>
+          <p class="card-place-of-event">場所: 軟鉄庵</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-one-third" style="display:block;box-sizing:border-box;">
+      <div class="card-of-event">
+        <img class="card-img-of-event" src="/images/1203/闇のワクワクさん.jpg" alt="">
+        <div class="card-body-of-event">
+          <h4 class="card-title-of-event">闇のワクワクさん</h4>
+          <p class="card-place-of-event">場所: 民生池、食堂</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-one-third" style="display:block;box-sizing:border-box;">
+      <div class="card-of-event">
+        <img class="card-img-of-event" src="/images/1203/2023年度NF統一テーマを考えよう.jpg" alt="">
+        <div class="card-body-of-event">
+          <h4 class="card-title-of-event">2023年度NF統一テーマを考えよう</h4>
+          <p class="card-place-of-event">場所: どこでも</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-one-third" style="display:block;box-sizing:border-box;">
+      <div class="card-of-event">
+        <img class="card-img-of-event" src="/images/1203/光のワクワクさん.jpg" alt="">
+        <div class="card-body-of-event">
+          <h4 class="card-title-of-event">光のワクワクさん</h4>
+          <p class="card-place-of-event">場所: 中庭</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-one-third" style="display:block;box-sizing:border-box;">
+      <div class="card-of-event">
+        <img class="card-img-of-event" src="/images/1203/鴨川イカダレース2022.jpg" alt="">
+        <div class="card-body-of-event">
+          <h4 class="card-title-of-event">鴨川イカダレース2022</h4>
+          <p class="card-place-of-event">場所: 鴨川</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-one-third" style="display:block;box-sizing:border-box;">
+      <div class="card-of-event">
+        <img class="card-img-of-event" src="/images/1203/視力低下出前館.jpg" alt="">
+        <div class="card-body-of-event">
+          <h4 class="card-title-of-event">視力低下出前館</h4>
+          <p class="card-place-of-event">場所: 食堂、ロビー、食堂北部（どこでも）</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-one-third" style="display:block;box-sizing:border-box;">
+      <div class="card-of-event">
+        <img class="card-img-of-event" src="/images/1203/姫路城を見て京都駅大階段へ行こう！.jpg" alt="">
+        <div class="card-body-of-event">
+          <h4 class="card-title-of-event">姫路城を見て京都駅大階段へ行こう！</h4>
+          <p class="card-place-of-event">場所: 山陰本線、播但線、東海道本線経由</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-one-third" style="display:block;box-sizing:border-box;">
+      <div class="card-of-event">
+        <img class="card-img-of-event" src="/images/1203/寮祭ライブ.jpg" alt="">
+        <div class="card-body-of-event">
+          <h4 class="card-title-of-event">寮祭ライブ</h4>
+          <p class="card-place-of-event">場所: 食堂</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-one-third" style="display:block;box-sizing:border-box;">
+      <div class="card-of-event">
+        <img class="card-img-of-event" src="/images/1203/流刑.jpg" alt="">
+        <div class="card-body-of-event">
+          <h4 class="card-title-of-event">流刑</h4>
+          <p class="card-place-of-event">場所: 四条大橋</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-one-third" style="display:block;box-sizing:border-box;">
+      <div class="card-of-event">
+        <img class="card-img-of-event" src="/images/1203/鴨川全力砂鉄集め.jpg" alt="">
+        <div class="card-body-of-event">
+          <h4 class="card-title-of-event">鴨川全力砂鉄集め</h4>
+          <p class="card-place-of-event">場所: 鴨川</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-one-third" style="display:block;box-sizing:border-box;">
+      <div class="card-of-event">
+        <img class="card-img-of-event" src="/images/1203/ピザ窯コンパ.jpg" alt="">
+        <div class="card-body-of-event">
+          <h4 class="card-title-of-event">ピザ窯コンパ</h4>
+          <p class="card-place-of-event">場所: 中庭</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-one-third" style="display:block;box-sizing:border-box;">
+      <div class="card-of-event">
+        <img class="card-img-of-event" src="/images/1203/NovelAIで全員の好み合わせたら最強の絵ができる説.jpg" alt="">
+        <div class="card-body-of-event">
+          <h4 class="card-title-of-event">NovelAIで全員の好み合わせたら最強の絵ができる説</h4>
+          <p class="card-place-of-event">場所: どこか</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-one-third" style="display:block;box-sizing:border-box;">
+      <div class="card-of-event">
+        <img class="card-img-of-event" src="/images/1203/無色透明.jpg" alt="">
+        <div class="card-body-of-event">
+          <h4 class="card-title-of-event">無色透明</h4>
+          <p class="card-place-of-event">場所: 食堂・ロビー</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-one-third" style="display:block;box-sizing:border-box;">
+      <div class="card-of-event">
+        <img class="card-img-of-event" src="/images/1203/いらすとやタイトル当てクイズファイナル.jpg" alt="">
+        <div class="card-body-of-event">
+          <h4 class="card-title-of-event">いらすとやタイトル当てクイズファイナル</h4>
+          <p class="card-place-of-event">場所: 食堂</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-one-third" style="display:block;box-sizing:border-box;">
+      <div class="card-of-event">
+        <img class="card-img-of-event" src="/images/1203/スカートワンピースコンパ.jpg" alt="">
+        <div class="card-body-of-event">
+          <h4 class="card-title-of-event">スカートワンピースコンパ</h4>
+          <p class="card-place-of-event">場所: どこか</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-one-third" style="display:block;box-sizing:border-box;">
+      <div class="card-of-event">
+        <img class="card-img-of-event" src="/images/1203/保健所感謝の日.jpg" alt="">
+        <div class="card-body-of-event">
+          <h4 class="card-title-of-event">保健所感謝の日</h4>
+          <p class="card-place-of-event">場所: 柳馬場御池アサヒビル　京都市保健福祉局</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-one-third" style="display:block;box-sizing:border-box;">
+      <div class="card-of-event">
+        <img class="card-img-of-event" src="/images/1203/学寮コンパ.jpg" alt="">
+        <div class="card-body-of-event">
+          <h4 class="card-title-of-event">学寮コンパ</h4>
+          <p class="card-place-of-event">場所: 食堂</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-one-third" style="display:block;box-sizing:border-box;">
+      <div class="card-of-event">
+        <img class="card-img-of-event" src="/images/1203/京都駅大階段グリコ.jpg" alt="">
+        <div class="card-body-of-event">
+          <h4 class="card-title-of-event">京都駅大階段グリコ</h4>
+          <p class="card-place-of-event">場所: 京都駅</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-one-third" style="display:block;box-sizing:border-box;">
+      <div class="card-of-event">
+        <img class="card-img-of-event" src="/images/1203/一夜漬け司法試験.jpg" alt="">
+        <div class="card-body-of-event">
+          <h4 class="card-title-of-event">一夜漬け司法試験</h4>
+          <p class="card-place-of-event">場所: どこか</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-one-third" style="display:block;box-sizing:border-box;">
+      <div class="card-of-event">
+        <img class="card-img-of-event" src="/images/1203/外山合宿同窓会.jpg" alt="">
+        <div class="card-body-of-event">
+          <h4 class="card-title-of-event">外山合宿同窓会</h4>
+          <p class="card-place-of-event">場所: ロビーまたは食堂</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-one-third" style="display:block;box-sizing:border-box;">
+      <div class="card-of-event">
+        <img class="card-img-of-event" src="/images/1203/ゲシュ「タルト」崩壊.jpg" alt="">
+        <div class="card-body-of-event">
+          <h4 class="card-title-of-event">ゲシュ「タルト」崩壊</h4>
+          <p class="card-place-of-event">場所: 食堂</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-one-third" style="display:block;box-sizing:border-box;">
+      <div class="card-of-event">
+        <img class="card-img-of-event" src="/images/1203/ハンディキャップ卓球大会.jpg" alt="">
+        <div class="card-body-of-event">
+          <h4 class="card-title-of-event">ハンディキャップ卓球大会</h4>
+          <p class="card-place-of-event">場所: 食堂</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</div>
+</body>
+</html>
