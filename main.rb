@@ -2,15 +2,11 @@ require 'csv'
 require 'erb'
 
 program_csv_path = "./ryosai2022.csv"
-output_dir = "docs"
+output_dir = "html"
+# src_domain = "https://kumano-dormitory.github.io"
+src_domain = ""
 
 events_erb = <<EndOfContents
-<html>
-<head>
-</head>
-<body>
-<div>
-
 <style scoped>
 .row-of-events {
   --bs-gutter-x: 1.5rem;
@@ -88,7 +84,7 @@ events_erb = <<EndOfContents
 <% events.each do |event| %>
     <div class="col-one-third" style="display:block;box-sizing:border-box;">
       <div class="card-of-event">
-        <img class="card-img-of-event" src="/Kumanofes2022data/<%= event['image'] %>" alt="<%= %>">
+        <img class="card-img-of-event" src="#{src_domain}/Kumanofes2022data/<%= event['image'] %>" alt="<%= event['name'] %>">
         <div class="card-body-of-event">
           <h4 class="card-title-of-event"><%= event['name'] %></h4>
           <% if event['place'] && !event['place'].empty? %><p class="card-place-of-event">場所: <%= event['place'] %></p><% end %>
@@ -98,11 +94,19 @@ events_erb = <<EndOfContents
 <% end %>
   </div>
 </div>
+EndOfContents
 
+html_template_erb = "<html>
+<head>
+</head>
+<body>
+<div>
+
+#{events_erb}
 </div>
 </body>
 </html>
-EndOfContents
+"
 
 if !File.exist?(program_csv_path)
   puts "[Error] #{program_csv_path} does not exist."
@@ -118,6 +122,9 @@ days = ['1125', '1126', '1127', '1128', '1129', '1130', '1201', '1202', '1203', 
 days.each do |day|
   events = csv_data.filter{ |d| d['start_day'] == day }
   b = binding
+  File.open("docs/events#{day}.html", 'w+') do |f|
+    f.write(ERB.new(html_template_erb).result(b))
+  end
   File.open("#{output_dir}/events#{day}.html", 'w+') do |f|
     f.write(ERB.new(events_erb).result(b))
   end
@@ -125,14 +132,21 @@ end
 
 # guerrilla
 events = csv_data.filter{ |d| d['start_day'] == 'ゲリラ' }
+File.open("docs/guerrilla.html", 'w+') do |f|
+  f.write(ERB.new(html_template_erb).result(binding))
+end
 File.open("#{output_dir}/guerrilla.html", 'w+') do |f|
   f.write(ERB.new(events_erb).result(binding))
 end
 
 # permanent
 events = csv_data.filter{ |d| d['start_day'] == '常設' }
+File.open("docs/permanent.html", 'w+') do |f|
+  f.write(ERB.new(html_template_erb).result(binding))
+end
 File.open("#{output_dir}/permanent.html", 'w+') do |f|
   f.write(ERB.new(events_erb).result(binding))
 end
+
 
 puts "Program ended"
