@@ -114,6 +114,8 @@ if !File.exist?(program_csv_path)
 end
 
 csv_data = CSV.read(program_csv_path, encoding: 'BOM|utf-8', headers: true)
+
+# CSVファイルの中身を読み込めているか確認するためのデバッグ出力
 # csv_data.each do |data|
 #   puts "[#{data['start_day']}] #{data['id']} : #{data['name']} -- #{data['place']} "
 # end
